@@ -98,7 +98,7 @@ def run():
     asr_mode = os.getenv("ASR_MODE")
     logger.info(f"当前服务使用的asr识别模式: asr_mode: {asr_mode}")
     if asr_mode in ["offline", "2pass"]:
-        preload_model()
+        preload_model()         
     if asr_mode in ["streaming", "2pass"]:
         preload_streaming_models()
 

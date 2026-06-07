@@ -371,7 +371,7 @@ def preload_model():
             logger.info(f"2-pass 离线模型已预加载")
         else:
             # offline 模式：加载 offline_service 的 backend
-            service = get_offline_asr_service()
+            service = get_offline_asr_service()                 # service 就是这个 ASRServiceImpl 类
             await service.strategy.backend.initialize()
             logger.info(f"离线模型已预加载")
 
